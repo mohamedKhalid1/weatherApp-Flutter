@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_app2/constants.dart';
@@ -15,18 +14,19 @@ class WeatherHours extends StatefulWidget {
 class _WeatherHoursState extends State<WeatherHours> {
   @override
   Widget build(BuildContext context) {
-    String? cityName=Provider.of<WeatherProvider>(context).cityName;
+    String? cityName = Provider.of<WeatherProvider>(context).cityName;
     FiveDayModel? weatherTemp =
         Provider.of<WeatherProvider>(context).weatherTemp;
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            color: Colors.white30, borderRadius: BorderRadius.circular(10)),
+            color: const Color(0xFF08244F),
+            borderRadius: BorderRadius.circular(10)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(3),
               child: Text(
                 'Weather for $cityName for the next 24 hours',
